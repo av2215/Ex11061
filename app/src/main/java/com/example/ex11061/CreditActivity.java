@@ -1,8 +1,12 @@
 package com.example.ex11061;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -11,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * @version 1.0
  */
 public class CreditActivity extends AppCompatActivity {
+
 
     /**
      * This method is called when the activity is first created.
@@ -25,6 +30,18 @@ public class CreditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credits);
     }
+
+    /**
+     * This method inflates the options menu.
+     * @param menu The options menu in which you place your items.
+     * @return You must return true for the menu to be displayed; if you return false it will not be shown.
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.cred_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
 
     /**
      * This method is called when the 'back' button is clicked.
